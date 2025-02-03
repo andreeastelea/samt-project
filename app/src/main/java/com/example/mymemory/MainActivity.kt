@@ -41,6 +41,20 @@ class MainActivity : AppCompatActivity() {
        setupBoard()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.mi_refresh -> {
+                // setup the game again
+                setupBoard()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun setupBoard() {
         tvNumPairs.setTextColor(ContextCompat.getColor(this,R.color.color_progress_none))
         memoryGame = MemoryGame(boardSize)
@@ -55,27 +69,6 @@ class MainActivity : AppCompatActivity() {
         rvBoard.setHasFixedSize(true)
         rvBoard.layoutManager = GridLayoutManager(this, boardSize.getWidth())
     }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main,menu)
-        return true
-    }
-
-    class MainActivity : AppCompatActivity() {
-
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
-
-            // Setează titlul barei de acțiune
-            supportActionBar?.title = "Titlul Aplicației"
-        }
-    }
-
-
-
-
-
 
 
     private fun updateGameWithFlip(position: Int) {
