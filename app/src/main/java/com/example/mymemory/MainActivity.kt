@@ -54,6 +54,16 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+    
+    class MainActivity : AppCompatActivity() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+            // Setează titlul barei de acțiune
+            supportActionBar?.title = "Titlul Aplicației"
+        }
+    }
+
 
     private fun setupBoard() {
         tvNumPairs.setTextColor(ContextCompat.getColor(this,R.color.color_progress_none))
