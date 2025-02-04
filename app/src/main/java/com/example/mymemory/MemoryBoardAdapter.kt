@@ -32,11 +32,11 @@ class MemoryBoardAdapter(
 
     }
         inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            private val imageButton = itemView.findViewById<ImageButton>(R.id.ImageButton)
+            private val imageButton = itemView.findViewById<ImageButton>(R.id.imageButton)
             fun bind(position: Int) {
                 val memoryCard:MemoryCard = cards[position]
                 imageButton.setImageResource(if(memoryCard.isFaceUp) memoryCard.identifier
-                                                else R.drawable.ic_launcher_background)
+                                                else R.drawable.cards)
 
                 imageButton.alpha = if(memoryCard.isMatched) .4f else 1.0f
 

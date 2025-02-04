@@ -5,4 +5,9 @@
     <color name="colorGray">#E0E0E0</color>
     <color name="color_progress_none">#DC1E0B</color>
     <color name="color_progress_full">#35BA01</color>
+    <color name="pink_1">#EBBCF0</color>
+    <color name="pink_2">#F06CBB</color>
+    <color name="blue">#6CACF0</color>
+    <color name="purple">#B86CF0</color>
+    <color name="indigo">#4B0082</color>
 </resources>
