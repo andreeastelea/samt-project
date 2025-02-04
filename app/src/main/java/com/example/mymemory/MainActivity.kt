@@ -107,16 +107,6 @@ class MainActivity : AppCompatActivity() {
             }.show()
     }
 
-    class MainActivity : AppCompatActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
-            // Setează titlul barei de acțiune
-            supportActionBar?.title = "Titlul Aplicației"
-        }
-    }
-
-
     private fun setupBoard() {
         when(boardSize){
             BoardSize.EASY -> {
@@ -139,12 +129,10 @@ class MainActivity : AppCompatActivity() {
                 updateGameWithFlip(position)
             }
         })
-
         rvBoard.adapter = adapter
         rvBoard.setHasFixedSize(true)
         rvBoard.layoutManager = GridLayoutManager(this, boardSize.getWidth())
     }
-
 
     private fun updateGameWithFlip(position: Int) {
         // Verificări de eroare

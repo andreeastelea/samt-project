@@ -21,12 +21,10 @@ class MemoryBoardAdapter(
 ) :
 
     RecyclerView.Adapter<MemoryBoardAdapter.ViewHolder>() {
-
         companion object {
             private const val MARGIN_SIZE = 10
             private const val TAG = "MemoryBoardAdapter"
         }
-
     interface CardClickListener{
         fun onCardClicked(position:Int)
 
@@ -52,7 +50,6 @@ class MemoryBoardAdapter(
 
             }
         }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val cardWidth = parent.width/boardSize.getWidth() - (2*MARGIN_SIZE)
         val cardHeight = parent.height/boardSize.getHeight() - (2*MARGIN_SIZE)
@@ -64,9 +61,7 @@ class MemoryBoardAdapter(
         layoutParams.setMargins(MARGIN_SIZE,MARGIN_SIZE, MARGIN_SIZE, MARGIN_SIZE)
         return ViewHolder(view)
     }
-
     override fun getItemCount() = boardSize.numCards
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(position)
     }
