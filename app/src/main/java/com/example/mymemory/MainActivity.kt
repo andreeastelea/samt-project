@@ -122,19 +122,14 @@ class MainActivity : AppCompatActivity() {
             BoardSize.EASY -> {
                 tvNumMoves.text = "Easy: 4 x 2"
                 tvNumPairs.text = "Pairs: 0 / 4"
-
             }
             BoardSize.MEDIUM -> {
-
                 tvNumMoves.text = "Medium: 6 x 3"
                 tvNumPairs.text = "Pairs: 0 / 9"
-
             }
             BoardSize.HARD -> {
-
                 tvNumMoves.text = "Hard: 6 x 4"
                 tvNumPairs.text = "Pairs: 0 / 12"
-
             }
         }
         tvNumPairs.setTextColor(ContextCompat.getColor(this,R.color.color_progress_none))
@@ -144,7 +139,6 @@ class MainActivity : AppCompatActivity() {
                 updateGameWithFlip(position)
             }
         })
-
 
         rvBoard.adapter = adapter
         rvBoard.setHasFixedSize(true)
